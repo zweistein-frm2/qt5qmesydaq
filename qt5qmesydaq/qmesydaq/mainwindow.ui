@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QMesyDAQ</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout"/>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_Files">
+    <property name="title">
+     <string>&amp;Files</string>
+    </property>
+    <addaction name="actionNewSetup"/>
+    <addaction name="separator"/>
+    <addaction name="action_Save_Config_File"/>
+    <addaction name="action_Load_Config_File"/>
+    <addaction name="separator"/>
+    <addaction name="action_Replay_List_File"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave_Histogram_File"/>
+    <addaction name="actionLoad_Histogram_File"/>
+    <addaction name="separator"/>
+    <addaction name="actionLoad_Calibration_File"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrint"/>
+    <addaction name="actionExport_PDF"/>
+    <addaction name="actionExport_SVG"/>
+    <addaction name="separator"/>
+    <addaction name="action_Quit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="action_About"/>
+    <addaction name="actionAbout_Qt"/>
+    <addaction name="separator"/>
+    <addaction name="action_Bug_Report"/>
+   </widget>
+   <widget class="QMenu" name="menu_Configuration">
+    <property name="title">
+     <string>&amp;Configuration</string>
+    </property>
+    <widget class="QMenu" name="menuMCPD">
+     <property name="title">
+      <string>MCPD</string>
+     </property>
+     <addaction name="actionSetupMCPD"/>
+     <addaction name="actionAddMCPD"/>
+    </widget>
+    <widget class="QMenu" name="menuMode">
+     <property name="title">
+      <string>Mode</string>
+     </property>
+     <addaction name="actionUser"/>
+     <addaction name="actionExpert"/>
+     <addaction name="actionSuperUser"/>
+    </widget>
+    <widget class="QMenu" name="menuRemoteInterface">
+     <property name="title">
+      <string>Remote Interface</string>
+     </property>
+     <addaction name="actionTACO"/>
+     <addaction name="actionTCP"/>
+     <addaction name="actionCARESS"/>
+    </widget>
+    <addaction name="actionGeneral"/>
+    <addaction name="menuMCPD"/>
+    <addaction name="actionModule"/>
+    <addaction name="separator"/>
+    <addaction name="actionHistogram_Mapping"/>
+    <addaction name="menuMode"/>
+    <addaction name="separator"/>
+    <addaction name="menuRemoteInterface"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="title">
+     <string>&amp;Tools</string>
+    </property>
+    <addaction name="actionPulser"/>
+   </widget>
+   <addaction name="menu_Files"/>
+   <addaction name="menu_Configuration"/>
+   <addaction name="menuTools"/>
+   <addaction name="menu_Help"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_Save_Config_File">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/filesave.xpm</normaloff>images/filesave.xpm</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save Config File ...</string>
+   </property>
+  </action>
+  <action name="action_Load_Config_File">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/fileopen.xpm</normaloff>images/fileopen.xpm</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Load Config File ...</string>
+   </property>
+  </action>
+  <action name="action_Replay_List_File">
+   <property name="text">
+    <string>&amp;Replay List File ...</string>
+   </property>
+  </action>
+  <action name="actionSave_Histogram_File">
+   <property name="text">
+    <string>Save &amp;Histogram File ...</string>
+   </property>
+  </action>
+  <action name="actionLoad_Histogram_File">
+   <property name="text">
+    <string>Load H&amp;istogram File ...</string>
+   </property>
+  </action>
+  <action name="action_Quit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="text">
+    <string>&amp;Print ...</string>
+   </property>
+  </action>
+  <action name="actionExport_PDF">
+   <property name="text">
+    <string>E&amp;xport PDF </string>
+   </property>
+  </action>
+  <action name="actionExport_SVG">
+   <property name="text">
+    <string>Export &amp;SVG</string>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="text">
+    <string>&amp;About ...</string>
+   </property>
+  </action>
+  <action name="actionAbout_Qt">
+   <property name="text">
+    <string>About &amp;Qt ...</string>
+   </property>
+  </action>
+  <action name="actionGeneral">
+   <property name="text">
+    <string>&amp;General</string>
+   </property>
+  </action>
+  <action name="actionNewSetup">
+   <property name="text">
+    <string>&amp;New Setup</string>
+   </property>
+  </action>
+  <action name="actionSuperUser">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Superuser</string>
+   </property>
+  </action>
+  <action name="actionExpert">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Expert</string>
+   </property>
+  </action>
+  <action name="actionUser">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>User</string>
+   </property>
+  </action>
+  <action name="actionModule">
+   <property name="text">
+    <string>Module</string>
+   </property>
+  </action>
+  <action name="actionSetupMCPD">
+   <property name="text">
+    <string>Setup</string>
+   </property>
+  </action>
+  <action name="actionAddMCPD">
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </action>
+  <action name="actionLoad_Calibration_File">
+   <property name="text">
+    <string>Load &amp;Calibration File ...</string>
+   </property>
+  </action>
+  <action name="actionHistogram_Mapping">
+   <property name="text">
+    <string>&amp;Histogram Mapping</string>
+   </property>
+   <property name="toolTip">
+    <string>edit histogram mapping</string>
+   </property>
+  </action>
+  <action name="actionTACO">
+   <property name="text">
+    <string>TACO</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionTCP">
+   <property name="text">
+    <string>TCP</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionCARESS">
+   <property name="text">
+    <string>CARESS</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionPulser">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Pulser</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_Bug_Report">
+   <property name="text">
+    <string>Bug report ...</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionUser</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>selectUser()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Quit</sender>
+   <signal>activated()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSuperUser</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>selectSuperuser()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionExpert</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>selectExpert()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Bug_Report</sender>
+   <signal>activated()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>bugReport()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>selectUser()</slot>
+  <slot>selectExpert()</slot>
+  <slot>selectSuperuser()</slot>
+  <slot>bugReport()</slot>
+ </slots>
+</ui>
