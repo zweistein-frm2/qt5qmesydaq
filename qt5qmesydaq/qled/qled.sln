@@ -1,0 +1,34 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qled", "src\qled.vcxproj", "{376338F2-50D4-3BF3-A7DA-9426D11A80BC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example", "example\example.vcxproj", "{6B1D6EE0-A888-3AB7-8867-3018BFA0BE3C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{376338F2-50D4-3BF3-A7DA-9426D11A80BC} = {376338F2-50D4-3BF3-A7DA-9426D11A80BC}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{376338F2-50D4-3BF3-A7DA-9426D11A80BC}.Debug|x64.ActiveCfg = Debug|x64
+		{376338F2-50D4-3BF3-A7DA-9426D11A80BC}.Debug|x64.Build.0 = Debug|x64
+		{376338F2-50D4-3BF3-A7DA-9426D11A80BC}.Release|x64.ActiveCfg = Release|x64
+		{376338F2-50D4-3BF3-A7DA-9426D11A80BC}.Release|x64.Build.0 = Release|x64
+		{6B1D6EE0-A888-3AB7-8867-3018BFA0BE3C}.Debug|x64.ActiveCfg = Debug|x64
+		{6B1D6EE0-A888-3AB7-8867-3018BFA0BE3C}.Debug|x64.Build.0 = Debug|x64
+		{6B1D6EE0-A888-3AB7-8867-3018BFA0BE3C}.Release|x64.ActiveCfg = Release|x64
+		{6B1D6EE0-A888-3AB7-8867-3018BFA0BE3C}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		Qt5Version = 5.13.1
+		SolutionGuid = {C1DDCB68-9596-4E02-9EA4-69FA4A80A61A}
+	EndGlobalSection
+EndGlobal
