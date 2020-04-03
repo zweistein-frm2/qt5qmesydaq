@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qmesydaq", "qmesydaq\qmesydaq.vcxproj", "{B12702AD-ABFB-343A-A199-8E24837244A3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmesydaq", "lib\libqmesydaq.vcxproj", "{0E70E37B-FFFE-4218-B157-B4731D3C0FB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{807EC7E1-3F5A-477F-AF82-CFBDF4CDC17D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qwt5-qt5", "qwt5-qt5\src\qwt5-qt.vcxproj", "{650A0D92-DB93-3323-88C3-88C04E97EF5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|x64.ActiveCfg = Debug|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|x64.Build.0 = Debug|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|x86.ActiveCfg = Debug|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x64.ActiveCfg = Release|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x64.Build.0 = Release|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x86.ActiveCfg = Release|x64
+		{0E70E37B-FFFE-4218-B157-B4731D3C0FB6}.Debug|x64.ActiveCfg = Debug|x64
+		{0E70E37B-FFFE-4218-B157-B4731D3C0FB6}.Debug|x64.Build.0 = Debug|x64
+		{0E70E37B-FFFE-4218-B157-B4731D3C0FB6}.Debug|x86.ActiveCfg = Debug|Win32
+		{0E70E37B-FFFE-4218-B157-B4731D3C0FB6}.Debug|x86.Build.0 = Debug|Win32
+		{0E70E37B-FFFE-4218-B157-B4731D3C0FB6}.Release|x64.ActiveCfg = Release|x64
+		{0E70E37B-FFFE-4218-B157-B4731D3C0FB6}.Release|x64.Build.0 = Release|x64
+		{0E70E37B-FFFE-4218-B157-B4731D3C0FB6}.Release|x86.ActiveCfg = Release|Win32
+		{0E70E37B-FFFE-4218-B157-B4731D3C0FB6}.Release|x86.Build.0 = Release|Win32
+		{650A0D92-DB93-3323-88C3-88C04E97EF5F}.Debug|x64.ActiveCfg = Debug|x64
+		{650A0D92-DB93-3323-88C3-88C04E97EF5F}.Debug|x64.Build.0 = Debug|x64
+		{650A0D92-DB93-3323-88C3-88C04E97EF5F}.Debug|x86.ActiveCfg = Debug|x64
+		{650A0D92-DB93-3323-88C3-88C04E97EF5F}.Release|x64.ActiveCfg = Release|x64
+		{650A0D92-DB93-3323-88C3-88C04E97EF5F}.Release|x64.Build.0 = Release|x64
+		{650A0D92-DB93-3323-88C3-88C04E97EF5F}.Release|x86.ActiveCfg = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E367677-2B30-48A6-AE77-59CDC83C81B0}
+		Qt5Version = 5.13.2
+	EndGlobalSection
+EndGlobal

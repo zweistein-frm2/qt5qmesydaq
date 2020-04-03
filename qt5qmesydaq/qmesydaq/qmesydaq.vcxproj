@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="additionaleventconfig.ui" />
+    <QtUic Include="caresssetup.ui" />
+    <QtUic Include="channelhistogramsetup.ui" />
+    <QtUic Include="doublepresetwidget.ui" />
+    <QtUic Include="generalsetup.ui" />
+    <QtUic Include="histogrammappingeditor.ui" />
+    <QtUic Include="ipaddresswidget.ui" />
+    <QtUic Include="mainwidget.ui" />
+    <QtUic Include="mainwindow.ui" />
+    <QtUic Include="mcpdsetup.ui" />
+    <QtUic Include="mdllpulser.ui" />
+    <QtUic Include="mdllsetup.ui" />
+    <QtUic Include="moduleidentificationpage.ui" />
+    <QtUic Include="modulemasterpage.ui" />
+    <QtUic Include="modulesetup.ui" />
+    <QtUic Include="modulestatus.ui" />
+    <QtUic Include="modulewizard.ui" />
+    <QtUic Include="monitorpresetwidget.ui" />
+    <QtUic Include="mpsdpulser.ui" />
+    <QtUic Include="passworddialog.ui" />
+    <QtUic Include="presetwidget.ui" />
+    <QtUic Include="statusbarentry.ui" />
+    <QtUic Include="tcpsetup.ui" />
+    <QtUic Include="website.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Neu2d_det\charm\coloured_console_sink.cpp" />
+    <ClCompile Include="..\..\Neu2d_det\charm\simpleLogger.cpp" />
+    <ClCompile Include="..\qled\src\qled.cpp" />
+    <ClCompile Include="caresssetup.cpp" />
+    <ClCompile Include="ChannelSpinBox.cpp" />
+    <ClCompile Include="colormaps.cpp" />
+    <ClCompile Include="colorwidget.cpp" />
+    <ClCompile Include="CommandEvent.cpp" />
+    <ClCompile Include="ConfigFileDialog.cpp" />
+    <ClCompile Include="data.cpp" />
+    <ClCompile Include="datetimelabel.cpp" />
+    <ClCompile Include="doublepresetwidget.cpp" />
+    <ClCompile Include="generalsetup.cpp" />
+    <ClCompile Include="histogramedittablewidget.cpp" />
+    <ClCompile Include="histogrammappingeditor.cpp" />
+    <ClCompile Include="ipaddresswidget.cpp" />
+    <ClCompile Include="LoopObject.cpp" />
+    <ClCompile Include="main.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ClCompile Include="mainwidget.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp" />
+    <ClCompile Include="mcpdsetup.cpp" />
+    <ClCompile Include="MCPDSpinBox.cpp" />
+    <ClCompile Include="mdllpulser.cpp" />
+    <ClCompile Include="mdllsetup.cpp" />
+    <ClCompile Include="mesydaqdata.cpp" />
+    <ClCompile Include="moduleidentificationpage.cpp" />
+    <ClCompile Include="modulemasterpage.cpp" />
+    <ClCompile Include="modulesetup.cpp" />
+    <ClCompile Include="ModuleSpinBox.cpp" />
+    <ClCompile Include="modulestatus.cpp" />
+    <ClCompile Include="modulewizard.cpp" />
+    <ClCompile Include="monitorpresetwidget.cpp" />
+    <ClCompile Include="mpsdpulser.cpp" />
+    <ClCompile Include="MultipleLoopApplication.cpp" />
+    <ClCompile Include="passworddialog.cpp" />
+    <ClCompile Include="plot.cpp" />
+    <ClCompile Include="presetwidget.cpp" />
+    <ClCompile Include="QMesydaqDetectorInterface.cpp" />
+    <ClCompile Include="QtInterface.cpp" />
+    <ClCompile Include="statusbarentry.cpp" />
+    <ClCompile Include="tcpsetup.cpp" />
+    <ClCompile Include="website.cpp" />
+    <ClCompile Include="zoomer.cpp" />
+    <ClCompile Include="Zweistein.Console.cpp">
+      <DeploymentContent>false</DeploymentContent>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ClCompile Include="Zweistein.Console.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\qled\src\qled.h" />
+    <ClInclude Include="..\..\Neu2d_det\charm\coloured_console_sink.h" />
+    <ClInclude Include="..\..\Neu2d_det\charm\simpleLogger.h" />
+    <ClInclude Include="..\..\Neu2d_det\charm\Zweistein.Logger.hpp" />
+    <ClInclude Include="colormaps.h" />
+    <ClInclude Include="CommandEvent.h" />
+    <ClInclude Include="data.h" />
+    <ClInclude Include="datetimelabel.h" />
+    <ClInclude Include="LoopObject.h" />
+    <ClInclude Include="mesydaqdata.h" />
+    <ClInclude Include="zoomer.h" />
+    <QtMoc Include="website.h" />
+    <QtMoc Include="tcpsetup.h" />
+    <QtMoc Include="StatusBarEntry.h" />
+    <QtMoc Include="QtInterface.h" />
+    <QtMoc Include="QMesydaqDetectorInterface.h" />
+    <QtMoc Include="presetwidget.h" />
+    <QtMoc Include="plot.h" />
+    <QtMoc Include="passworddialog.h" />
+    <QtMoc Include="MultipleLoopApplication.h" />
+    <QtMoc Include="mpsdpulser.h" />
+    <QtMoc Include="monitorpresetwidget.h" />
+    <QtMoc Include="modulewizard.h" />
+    <QtMoc Include="modulestatus.h" />
+    <QtMoc Include="ModuleSpinBox.h" />
+    <QtMoc Include="modulesetup.h" />
+    <QtMoc Include="modulemasterpage.h" />
+    <QtMoc Include="moduleidentificationpage.h" />
+    <QtMoc Include="mdllsetup.h" />
+    <QtMoc Include="mdllpulser.h" />
+    <QtMoc Include="MCPDSpinBox.h" />
+    <QtMoc Include="mcpdsetup.h" />
+    <QtMoc Include="mainwindow.h" />
+    <QtMoc Include="mainwidget.h" />
+    <QtMoc Include="ipaddresswidget.h" />
+    <QtMoc Include="histogrammappingeditor.h" />
+    <QtMoc Include="histogramedittablewidget.h" />
+    <QtMoc Include="generalsetup.h" />
+    <QtMoc Include="doublepresetwidget.h" />
+    <QtMoc Include="ConfigFileDialog.h" />
+    <QtMoc Include="colorwidget.h" />
+    <QtMoc Include="ChannelSpinBox.h" />
+    <QtMoc Include="caresssetup.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="..\qled\src\qled.qrc" />
+    <QtRcc Include="qmesydaq.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\lib\libqmesydaq.vcxproj">
+      <Project>{0e70e37b-fffe-4218-b157-b4731d3c0fb6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\qwt5-qt5\src\qwt5-qt.vcxproj">
+      <Project>{650a0d92-db93-3323-88c3-88c04e97ef5f}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
+    <Keyword>QtVS_v301</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)out\build\$(Platform)-$(Configuration)\</OutDir>
+    <IntDir>C:\temp\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)out\build\$(Platform)-$(Configuration)\</OutDir>
+    <IntDir>C:\temp\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtModules>core;gui;network;printsupport;svg;webenginewidgets;widgets</QtModules>
+    <QtInstall>5.12.5</QtInstall>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtModules>core;gui;network;printsupport;svg;webenginewidgets;widgets</QtModules>
+    <QtInstall>5.12.5</QtInstall>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalIncludeDirectories>$(Qt_INCLUDEPATH_);$(IntDir)\moc\%(RelativeDir);..\qwt5-qt5\src;..\qled\src;..\lib;.\;C:\Users\alanghof\source\repos\Neu2d_det\charm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>26812;26444;26451;26495</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;QWT_DLL;_WINDOWS;UNICODE;_UNICODE;WIN32_;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;LIBMESYDAQ_LIB;HAVE_BIT64;HAVE_CONFIG_H;EXTERN_FUNCDECLTYPE=__declspec(dllimport);SIMPLE_LOGGER;WIN32_PRE10OLDSTYLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qwt5-qt5d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>$(QtDllPath)\windeployqt.exe  $(TargetPath)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalIncludeDirectories>$(Qt_INCLUDEPATH_);$(IntDir)\uic\;..\qwt5-qt5\src;..\qled\src;..\lib;.\;C:\Users\alanghof\source\repos\Neu2d_det\charm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;QWT_DLL;_WINDOWS;UNICODE;_UNICODE;WIN32_;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;LIBMESYDAQ_LIB;HAVE_BIT64;HAVE_CONFIG_H;EXTERN_FUNCDECLTYPE=__declspec(dllimport);SIMPLE_LOGGER;WIN32_PRE10OLDSTYLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qwt5-qt5.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>$(QtDllPath)\windeployqt.exe  $(TargetPath)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

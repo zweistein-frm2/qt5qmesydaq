@@ -1,0 +1,23 @@
+<RCC version="1.0">
+  <qresource>
+    <file alias="logo.png">images/mesylogo_200x95_yellow.png</file>
+    <file>images/mesytec.jpg</file>
+    <file>images/mesytec.png</file>
+    <file>images/logo32.png</file>
+    <file>images/editcopy.xpm</file>
+    <file>images/editcut.xpm</file>
+    <file>images/editpaste.xpm</file>
+    <file>images/filenew.xpm</file>
+    <file>images/fileopen.xpm</file>
+    <file>images/filesave.xpm</file>
+    <file>images/apply.png</file>
+    <file>images/clear.png</file>
+    <file>images/help.png</file>
+    <file>images/up.png</file>
+    <file>images/down.png</file>
+    <file alias="quit">images/system-log-out.png</file>
+    <file alias="previous">images/go-previous.png</file>
+    <file alias="next">images/go-next1.png</file>
+  </qresource>
+</RCC>
+

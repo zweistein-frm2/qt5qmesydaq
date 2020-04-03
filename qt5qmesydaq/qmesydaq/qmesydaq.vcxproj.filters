@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Header Files\qled">
+      <UniqueIdentifier>{aa93529c-f192-46ee-865e-4d5719f706f3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="additionaleventconfig.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="caresssetup.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="channelhistogramsetup.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="doublepresetwidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="generalsetup.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="histogrammappingeditor.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ipaddresswidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mainwidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mainwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mcpdsetup.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mdllpulser.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mdllsetup.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="moduleidentificationpage.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="modulemasterpage.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="modulesetup.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="modulestatus.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="modulewizard.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="monitorpresetwidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mpsdpulser.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="passworddialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="presetwidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="statusbarentry.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="tcpsetup.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="website.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="caresssetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChannelSpinBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="colormaps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="colorwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigFileDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="doublepresetwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generalsetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="histogramedittablewidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="histogrammappingeditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ipaddresswidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LoopObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mcpdsetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MCPDSpinBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mdllpulser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mdllsetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mesydaqdata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moduleidentificationpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modulemasterpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modulesetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleSpinBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modulestatus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modulewizard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="monitorpresetwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mpsdpulser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MultipleLoopApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="plot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="presetwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QMesydaqDetectorInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QtInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tcpsetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="website.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zoomer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\qled\src\qled.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="statusbarentry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="passworddialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="datetimelabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Zweistein.Console.h" />
+    <ClCompile Include="..\..\Neu2d_det\charm\simpleLogger.cpp" />
+    <ClCompile Include="Zweistein.Console.cpp" />
+    <ClCompile Include="..\..\Neu2d_det\charm\coloured_console_sink.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="colormaps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LoopObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mesydaqdata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="zoomer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="datetimelabel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Neu2d_det\charm\Zweistein.Logger.hpp" />
+    <ClInclude Include="..\..\Neu2d_det\charm\simpleLogger.h" />
+    <ClInclude Include="..\..\Neu2d_det\charm\coloured_console_sink.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="caresssetup.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ChannelSpinBox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="colorwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ConfigFileDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="doublepresetwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="generalsetup.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="histogramedittablewidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="histogrammappingeditor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ipaddresswidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mainwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mainwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mcpdsetup.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MCPDSpinBox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mdllpulser.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mdllsetup.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="moduleidentificationpage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="modulemasterpage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="modulesetup.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ModuleSpinBox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="modulestatus.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="modulewizard.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="monitorpresetwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mpsdpulser.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MultipleLoopApplication.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="passworddialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="plot.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="presetwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QMesydaqDetectorInterface.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QtInterface.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="StatusBarEntry.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="tcpsetup.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="website.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\qled\src\qled.h">
+      <Filter>Header Files\qled</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="qmesydaq.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="..\qled\src\qled.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+</Project>
