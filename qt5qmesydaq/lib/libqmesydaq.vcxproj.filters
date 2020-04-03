@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Dateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Dateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Generierte Dateien">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generierte Dateien\Release">
+      <UniqueIdentifier>{560dae56-dee0-4d1c-b818-b24430131f5e}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generierte Dateien\Debug">
+      <UniqueIdentifier>{811c4f0c-b87c-46af-a5d8-9472a5acbaed}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="counter.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="datarepeater.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="editormemory.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="histogram.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mapcorrect.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mappeddetector.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mappedhistogram.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mcpd.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mcpd2.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mcpd8.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mdll.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mdllcorrect.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="measurement.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mesydaq2.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mpsd8.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mpsd8old.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mpsd8p.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mpsd8sadc.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mpsdfactory.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mstd16.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="networkdevice.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="usermapcorrect.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="spectrum.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="streamwriter.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="nomodule.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="pulsertest.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mwpchr.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="m2d.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="m2dfactory.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="linearmapcorrect.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="calibration.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Neu2d_det\charm\coloured_console_sink.cpp" />
+    <ClCompile Include="Zweistein.TraceSteps.cpp" />
+    <ClCompile Include="..\..\Neu2d_det\charm\simpleLogger.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Neu2d_det\charm\Zweistein.Logger.hpp" />
+    <ClInclude Include="qt_glue_std.hpp" />
+    <ClInclude Include="libqmesydaq_global.h" />
+    <ClInclude Include="..\..\Neu2d_det\charm\simpleLogger.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="structures.h" />
+    <ClInclude Include="calibration.h" />
+    <ClInclude Include="editormemory.h">
+      <Filter>Header Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="mappeddetector.h">
+      <Filter>Header Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="mdllcorrect.h">
+      <Filter>Header Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="pulsertest.h">
+      <Filter>Header Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="usermapcorrect.h">
+      <Filter>Header Dateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="counter.h">
+      <Filter>Header Dateien</Filter>
+    </QtMoc>
+    <QtMoc Include="datarepeater.h">
+      <Filter>Header Dateien</Filter>
+    </QtMoc>
+    <QtMoc Include="histogram.h">
+      <Filter>Header Dateien</Filter>
+    </QtMoc>
+    <QtMoc Include="mapcorrect.h">
+      <Filter>Header Dateien</Filter>
+    </QtMoc>
+    <QtMoc Include="mappedhistogram.h">
+      <Filter>Header Dateien</Filter>
+    </QtMoc>
+    <QtMoc Include="mcpd.h">
+      <Filter>Header Dateien</Filter>
+    </QtMoc>
+    <QtMoc Include="mcpd2.h">
+      <Filter>Header Dateien</Filter>
+    </QtMoc>
+    <QtMoc Include="mcpd8.h">
+      <Filter>Header Dateien</Filter>
+    </QtMoc>
+    <QtMoc Include="mdll.h">
+      <Filter>Header Dateien</Filter>
+    </QtMoc>
+    <QtMoc Include="measurement.h">
+      <Filter>Header Dateien</Filter>
+    </QtMoc>
+    <QtMoc Include="mesydaq2.h">
+      <Filter>Header Dateien</Filter>
+    </QtMoc>
+    <QtMoc Include="mpsd8.h">
+      <Filter>Header Dateien</Filter>
+    </QtMoc>
+    <QtMoc Include="mstd16.h">
+      <Filter>Header Dateien</Filter>
+    </QtMoc>
+    <QtMoc Include="networkdevice.h">
+      <Filter>Header Dateien</Filter>
+    </QtMoc>
+    <QtMoc Include="spectrum.h">
+      <Filter>Header Dateien</Filter>
+    </QtMoc>
+    <QtMoc Include="streamwriter.h">
+      <Filter>Header Dateien</Filter>
+    </QtMoc>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0E70E37B-FFFE-4218-B157-B4731D3C0FB6}</ProjectGuid>
+    <Keyword>QtVS_v301</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>libmesydaq</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>5.12.5</QtInstall>
+    <QtModules>core;network;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <QtModules>core;network;widgets</QtModules>
+    <QtInstall>5.13.2</QtInstall>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>5.12.5</QtInstall>
+    <QtModules>core;network;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <QtModules>core;network;widgets</QtModules>
+    <QtInstall>5.13.2</QtInstall>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.29403.142</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <IntDir>C:\temp\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)out\build\$(Platform)-$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <IntDir>C:\temp\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+    <OutDir>$(SolutionDir)out\build\$(Platform)-$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.\;.\GeneratedFiles\$(Configuration);$(QTDIR)\include;$(QTDIR)\include\qtmain;$(QTDIR)\include\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QT_NO_DEBUG;NDEBUG;LIBQMESYDAQ_LIB;QT_GUI_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile>StdAfx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <DebugInformationFormat />
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>QtCore4.lib;QtNetwork4.lib;QtGui4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\alanghof\source\repos\Neu2d_det\charm;$(Qt_INCLUDEPATH_);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;ASIOEXT_USE_BOOST_ASIO;UNICODE;WIN32;QT_LARGEFILE_SUPPORT=64;QT_GUI_LIB;SIMPLE_LOGGER;QT_NO_DEBUG;NDEBUG;_UNICODE;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;EXTERN_FUNCDECLTYPE=__declspec(dllexport);LIBQMESYDAQ_LIB;%(PreprocessorDefinitions);SIMPLE_LOGGER;WIN32_PRE10OLDSTYLE</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>StdAfx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(VcpkgRoot)lib\boost_filesystem-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(Qt_LIBPATH_);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalOptions> /SUBSYSTEM:WINDOWS</AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(QTDIR)\bin\Qt5Core.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5Gui.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5Network.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5Svg.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5WebEngineWidgets.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5PrintSupport.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5Widgets.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5WebEngineCore.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5Quick.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5QuickWidgets.dll $(TargetDir) </Command>
+    </PostBuildEvent>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.\;.\GeneratedFiles\$(Configuration);$(QTDIR)\include;$(QTDIR)\include\qtmain;$(QTDIR)\include\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UNICODE;WIN32;QT_LARGEFILE_SUPPORT;LIBQMESYDAQ_LIB;QT_GUI_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile>StdAfx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Users\alanghof\source\repos\Neu2d_det\charm;$(Qt_INCLUDEPATH_);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;ASIOEXT_USE_BOOST_ASIO;UNICODE;WIN32;QT_LARGEFILE_SUPPORT=64;QT_GUI_LIB;SIMPLE_LOGGER;_UNICODE;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;EXTERN_FUNCDECLTYPE=__declspec(dllexport);LIBQMESYDAQ_LIB;%(PreprocessorDefinitions);SIMPLE_LOGGER;WIN32_PRE10OLDSTYLE</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>StdAfx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(VcpkgRoot)lib\boost_filesystem-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(Qt_LIBPATH_);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalOptions> /SUBSYSTEM:WINDOWS</AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(QTDIR)\bin\Qt5Cored.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5Guid.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5Networkd.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5Svgd.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5WebEngineWidgetsd.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5WebEngineCored.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5PrintSupportd.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5Widgetsd.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5Quickd.dll $(TargetDir) 
+copy $(QTDIR)\bin\Qt5QuickWidgetsd.dll $(TargetDir) </Command>
+    </PostBuildEvent>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Neu2d_det\charm\coloured_console_sink.cpp" />
+    <ClCompile Include="..\..\Neu2d_det\charm\simpleLogger.cpp" />
+    <ClCompile Include="calibration.cpp" />
+    <ClCompile Include="counter.cpp" />
+    <ClCompile Include="datarepeater.cpp" />
+    <ClCompile Include="editormemory.cpp" />
+    <ClCompile Include="histogram.cpp" />
+    <ClCompile Include="linearmapcorrect.cpp" />
+    <ClCompile Include="m2d.cpp" />
+    <ClCompile Include="m2dfactory.cpp" />
+    <ClCompile Include="mapcorrect.cpp" />
+    <ClCompile Include="mappeddetector.cpp" />
+    <ClCompile Include="mappedhistogram.cpp" />
+    <ClCompile Include="mcpd.cpp" />
+    <ClCompile Include="mcpd2.cpp" />
+    <ClCompile Include="mcpd8.cpp" />
+    <ClCompile Include="mdll.cpp" />
+    <ClCompile Include="mdllcorrect.cpp" />
+    <ClCompile Include="measurement.cpp" />
+    <ClCompile Include="mesydaq2.cpp" />
+    <ClCompile Include="mpsd8.cpp" />
+    <ClCompile Include="mpsd8old.cpp" />
+    <ClCompile Include="mpsd8p.cpp" />
+    <ClCompile Include="mpsd8sadc.cpp" />
+    <ClCompile Include="mpsdfactory.cpp" />
+    <ClCompile Include="mstd16.cpp" />
+    <ClCompile Include="mwpchr.cpp" />
+    <ClCompile Include="networkdevice.cpp" />
+    <ClCompile Include="nomodule.cpp" />
+    <ClCompile Include="pulsertest.cpp" />
+    <ClCompile Include="spectrum.cpp" />
+    <ClCompile Include="streamwriter.cpp" />
+    <ClCompile Include="usermapcorrect.cpp" />
+    <ClCompile Include="Zweistein.TraceSteps.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpp17</LanguageStandard>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Neu2d_det\charm\simpleLogger.h" />
+    <ClInclude Include="..\..\Neu2d_det\charm\Zweistein.Logger.hpp" />
+    <ClInclude Include="calibration.h" />
+    <ClInclude Include="usermapcorrect.h" />
+    <QtMoc Include="counter.h" />
+    <QtMoc Include="datarepeater.h" />
+    <ClInclude Include="editormemory.h" />
+    <QtMoc Include="histogram.h" />
+    <QtMoc Include="mapcorrect.h" />
+    <ClInclude Include="mappeddetector.h" />
+    <QtMoc Include="mappedhistogram.h" />
+    <QtMoc Include="mcpd.h" />
+    <QtMoc Include="mcpd2.h" />
+    <QtMoc Include="mcpd8.h" />
+    <QtMoc Include="mdll.h" />
+    <ClInclude Include="mdllcorrect.h" />
+    <QtMoc Include="measurement.h" />
+    <QtMoc Include="mesydaq2.h" />
+    <QtMoc Include="mpsd8.h" />
+    <QtMoc Include="mstd16.h" />
+    <QtMoc Include="networkdevice.h" />
+    <ClInclude Include="pulsertest.h" />
+    <ClInclude Include="qt_glue_std.hpp" />
+    <ClInclude Include="libqmesydaq_global.h" />
+    <QtMoc Include="spectrum.h" />
+    <ClInclude Include="stdafx.h" />
+    <QtMoc Include="streamwriter.h" />
+    <ClInclude Include="structures.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties QtVersion_x0020_Win32="QT4.7.4" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
