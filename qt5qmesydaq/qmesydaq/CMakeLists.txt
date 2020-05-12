@@ -193,6 +193,8 @@ target_compile_definitions(qmesydaq PRIVATE UNICODE)
 target_link_libraries(qmesydaq PRIVATE magic_enum::magic_enum ${Boost_LIBRARIES}  Qt5::Widgets Qt5::Core Qt5::Svg Qt5::Network  Qt5::PrintSupport Qt5::WebEngineWidgets)
 target_link_libraries (qmesydaq LINK_PUBLIC  qwt5-qt5 libqmesydaq qled LoopObject)
 
+target_link_options(qmesydaq PRIVATE $<$<CXX_COMPILER_ID:GNU>:-Wl,-rpath,.>  )
+
 get_directory_property( DirDefs DIRECTORY ${CMAKE_SOURCE_DIR} COMPILE_DEFINITIONS )
 foreach( d ${DirDefs} )
     message( STATUS "Found Define: " ${d} )

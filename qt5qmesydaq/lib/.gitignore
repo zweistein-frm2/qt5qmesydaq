@@ -1,0 +1,7 @@
+out/
+.vs/
+obj/
+x64/
+CMakeFiles/
+bin/
+ARM/

@@ -15,6 +15,7 @@ endif()
 if(${QMESYDAQ_TANGO} STREQUAL ON)
 message(********USE_TANGO*************)
 add_compile_definitions(USE_TANGO)
+endif()
 if(UNIX)
 set(Tango_Controls_INLCUDE_DIR /usr/include/tango CACHE STRING "Tango_include")
 set(Tango_Controls_LIB /usr/lib/x86_64-linux-gnu/libtango.so CACHE STRING "Tango_lib")
@@ -24,7 +25,8 @@ set(Tango_Controls_SHARED_LIB_DIR $ENV{TANGO_ROOT}\\win64\\lib\\vc12_dll CACHE S
 set(Tango_Controls_INLCUDE_DIR "$ENV{TANGO_ROOT}\\win64\\include\\vc12" CACHE STRING "Tango_include")
 set(Tango_Controls_LIB "$ENV{TANGO_ROOT}\\win64\\lib\\vc12_dll\\tango.lib" CACHE STRING "Tango_lib")
 endif()
-endif()
+
+
 
 
 if(UNIX)
@@ -41,10 +43,16 @@ message("sudo ./b2 install")
 endif()
 project(qmesydaq)
 
+find_package(Boost 1.71 REQUIRED COMPONENTS filesystem chrono thread program_options iostreams log log_setup) # header only libraries must not be added here
+
+
 add_compile_definitions(BOOST_LOG_DYN_LINK)
 
 
-add_subdirectory (interfaces)
+add_subdirectory (interfaces/tcp)
+if(${QMESYDAQ_TANGO} STREQUAL ON)
+add_subdirectory (interfaces/tango)
+endif()
 add_subdirectory (qwt5-qt5)
 add_subdirectory(lib)
 add_subdirectory(qled)
@@ -64,27 +72,17 @@ add_custom_target(copylibs
 
   message(************MSVC copy************************************** )
   COMMAND ${CMAKE_COMMAND} -E  copy ${Tango_Controls_SHARED_LIB_DIR}/zmq.dll  ${qmesydaq_BINARY_DIR}/qmesydaq
-
   COMMAND ${CMAKE_COMMAND} -E copy  ${Tango_Controls_SHARED_LIB_DIR}/zmqd.dll  ${qmesydaq_BINARY_DIR}/qmesydaq
-
   COMMAND ${CMAKE_COMMAND} -E copy ${Tango_Controls_SHARED_LIB_DIR}/tango922.dll  ${qmesydaq_BINARY_DIR}/qmesydaq
-
   COMMAND ${CMAKE_COMMAND} -E copy ${Tango_Controls_SHARED_LIB_DIR}/tango922d.dll  ${qmesydaq_BINARY_DIR}/qmesydaq
-
   COMMAND ${CMAKE_COMMAND} -E copy ${Tango_Controls_SHARED_LIB_DIR}/omnithread40_vc13_rtd.dll  ${qmesydaq_BINARY_DIR}/qmesydaq
-
   COMMAND ${CMAKE_COMMAND} -E copy ${Tango_Controls_SHARED_LIB_DIR}/omnithread40_vc13_rt.dll  ${qmesydaq_BINARY_DIR}/qmesydaq
-
   COMMAND ${CMAKE_COMMAND} -E copy ${Tango_Controls_SHARED_LIB_DIR}/omniORB421_vc13_rtd.dll  ${qmesydaq_BINARY_DIR}/qmesydaq
-
   COMMAND ${CMAKE_COMMAND} -E copy ${Tango_Controls_SHARED_LIB_DIR}/omniORB421_vc13_rt.dll  ${qmesydaq_BINARY_DIR}/qmesydaq
-
   COMMAND ${CMAKE_COMMAND} -E copy ${Tango_Controls_SHARED_LIB_DIR}/omniDynamic421_vc13_rtd.dll  ${qmesydaq_BINARY_DIR}/qmesydaq
   COMMAND ${CMAKE_COMMAND} -E copy ${Tango_Controls_SHARED_LIB_DIR}/omniDynamic421_vc13_rt.dll  ${qmesydaq_BINARY_DIR}/qmesydaq
-
-   COMMAND ${CMAKE_COMMAND} -E copy ${Tango_Controls_SHARED_LIB_DIR}/log4tangod.dll  ${qmesydaq_BINARY_DIR}/qmesydaq
+  COMMAND ${CMAKE_COMMAND} -E copy ${Tango_Controls_SHARED_LIB_DIR}/log4tangod.dll  ${qmesydaq_BINARY_DIR}/qmesydaq
   COMMAND ${CMAKE_COMMAND} -E copy ${Tango_Controls_SHARED_LIB_DIR}/log4tango.dll  ${qmesydaq_BINARY_DIR}/qmesydaq
-
   COMMAND ${CMAKE_COMMAND} -E copy ${Tango_Controls_SHARED_LIB_DIR}/COS421_vc13_rt.dll  ${qmesydaq_BINARY_DIR}/qmesydaq
   COMMAND ${CMAKE_COMMAND} -E copy ${Tango_Controls_SHARED_LIB_DIR}/COS421_vc13_rtd.dll  ${qmesydaq_BINARY_DIR}/qmesydaq
 
@@ -100,6 +98,44 @@ else()
 add_dependencies(qmesydaq qwt5-qt5 libqmesydaq qled LoopObject tcploop copylibs)
 endif()
 
+if(WIN32)
+ if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+   set(WIN32LIB_SUFFIX d)
+   set(BOOSTLIB_DBG -gd)
+ endif()
+endif()
+
+if(WIN32)
+set(install_dir $ENV{HOMEDRIVE}$ENV{HOMEPATH}\\qt5qmesydaq\\)
+else()
+set(install_dir ~/)
+endif()
 
 
+install(
+    TARGETS ${PROJECT_NAME}
+       RUNTIME  DESTINATION ${install_dir}
+)
+install(
+    TARGETS libqmesydaq
+       RUNTIME  DESTINATION ${install_dir}
+       LIBRARY DESTINATION ${install_dir}
+)
 
+install(
+    TARGETS qwt5-qt5
+       RUNTIME  DESTINATION ${install_dir}
+       LIBRARY DESTINATION ${install_dir}
+)
+if(WIN32)
+install(CODE "execute_process(COMMAND ${Qt5Core_DIR}\\..\\..\\..\\bin\\windeployqt.exe   ${install_dir}qmesydaq.exe)")
+install(FILES 
+    "${CMAKE_CURRENT_BINARY_DIR}/qmesydaq/boost_filesystem-vc${MSVC_TOOLSET_VERSION}-mt${BOOSTLIB_DBG}-x64-${Boost_VERSION_MAJOR}_${Boost_VERSION_MINOR}.dll"
+    "${CMAKE_CURRENT_BINARY_DIR}/qmesydaq/boost_thread-vc${MSVC_TOOLSET_VERSION}-mt${BOOSTLIB_DBG}-x64-${Boost_VERSION_MAJOR}_${Boost_VERSION_MINOR}.dll" 
+    "${CMAKE_CURRENT_BINARY_DIR}/qmesydaq/boost_chrono-vc${MSVC_TOOLSET_VERSION}-mt${BOOSTLIB_DBG}-x64-${Boost_VERSION_MAJOR}_${Boost_VERSION_MINOR}.dll" 
+    "${CMAKE_CURRENT_BINARY_DIR}/qmesydaq/boost_log-vc${MSVC_TOOLSET_VERSION}-mt${BOOSTLIB_DBG}-x64-${Boost_VERSION_MAJOR}_${Boost_VERSION_MINOR}.dll"
+    "${CMAKE_CURRENT_BINARY_DIR}/qmesydaq/boost_date_time-vc${MSVC_TOOLSET_VERSION}-mt${BOOSTLIB_DBG}-x64-${Boost_VERSION_MAJOR}_${Boost_VERSION_MINOR}.dll"
+       DESTINATION ${install_dir}
+        )
+
+endif()
